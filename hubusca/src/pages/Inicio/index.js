@@ -4,14 +4,15 @@ import './App.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function App() {
 
+function App() {
   const [search, setSearch] = useState("");
   const [name, setName] = useState("Loading...");
   const [login, setLogin] = useState("Loading...");
   const [location, setLocation] = useState("Loading...");
   const [avatar_url, setAvatarURL] = useState("Loading...");
   const [mostrarDiv, setMostrarDiv] = useState(false);
+  
 
   const handleSearch = () => {
     axios.get(`https://api.github.com/users/${search}`)
@@ -31,7 +32,6 @@ function App() {
       });
 
   }
-  
   return (
     <><div className='container-app'>
 
@@ -58,7 +58,7 @@ function App() {
             {mostrarDiv && (
               <div className='content'>
                 <div>
-                  <Link to='/Perfil'><img className= 'avatar' src={avatar_url} alt='Perfil' /></Link>
+                  <Link to={`/Perfil?name=${name}&login=${login}&location=${location}&avatar_url=${avatar_url}`}><img className= 'avatar' src={avatar_url} alt='Perfil' /></Link>
                   <h1 className='name'>{name}</h1>
                   <p>{login}</p>
                   <p>{location}</p>
