@@ -1,6 +1,7 @@
 import axios from 'axios';
 import './App.css';
 import { useState } from 'react';
+import MinhaComponente from './esconder';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
   const [login, setLogin] = useState("Loading...");
   const [location, setLocation] = useState("Loading...");
   const [avatar_url, setAvatarURL] = useState("Loading...");
+  const [mostrarDiv, setMostrarDiv] = useState(false);
 
   const handleSearch = () => {
     axios.get(`https://api.github.com/users/${search}`)
@@ -18,6 +20,8 @@ function App() {
         setLogin(res.data.login);
         setLocation(res.data.location);
         setAvatarURL(res.data.avatar_url);
+        setMostrarDiv(!mostrarDiv);
+        
       })
 
       .catch((error) => {
@@ -28,34 +32,47 @@ function App() {
   }
   
   return (
-    <div className='container-app'>
+    <><div className='container-app'>
+
       <div className='container'>
         <header className='header-top'>
-          <ul>
-            <li>Jovem Programador</li>
-          </ul>
         </header>
+        <nav>
+          <p>App para buscar perfis do GitHub</p>
+        </nav>
 
         <main>
-          <div className='form'>
-            <h1>Buscador de Perfis do Github</h1>
-            <input type='text' 
-            placeholder='Digite um username' 
-            onChange={(e) => setSearch(e.target.value)}
-            />
-            <button onClick={handleSearch}>Buscar</button>
-          </div>
-          <div className='content'>
-            <div>
-              <img src={avatar_url} alt='Perfil'/>
-              <h1>{name}</h1>
-              <p>{login}</p>
-              <p>{location}</p>
+          <div className='center'>
+            <div className='form'>
+              <h1>Busque pelo Perfil</h1>
+              <input type='text'
+                placeholder='Digite um username'
+                onChange={(e) => setSearch(e.target.value)} />
+                <div>
+                  <button className='buscar' onClick={handleSearch}>Buscar</button>
+                </div>
+              
             </div>
+            <br/>
+            {mostrarDiv && (
+              <div className='content'>
+                <div>
+                  <img className= 'avatar' src={avatar_url} alt='Perfil' />
+                  <h1 className='name'>{name}</h1>
+                  <p>{login}</p>
+                  <p>{location}</p>
+                </div>
+              </div>
+            )}
           </div>
+
         </main>
+
       </div>
     </div>
+    <footer className='rodape'>
+    <p>&copy; 2023 Mikael Hayden | contatoshayden@gmail.com</p>
+    </footer></>
 
   );
 }
