@@ -1,7 +1,8 @@
 import axios from 'axios';
+import ReactDOM from 'react-dom/client';
 import './App.css';
 import { useState } from 'react';
-import MinhaComponente from './esconder';
+import { Link } from 'react-router-dom';
 
 function App() {
 
@@ -57,7 +58,7 @@ function App() {
             {mostrarDiv && (
               <div className='content'>
                 <div>
-                  <img className= 'avatar' src={avatar_url} alt='Perfil' />
+                  <Link to='/Perfil'><img className= 'avatar' src={avatar_url} alt='Perfil' /></Link>
                   <h1 className='name'>{name}</h1>
                   <p>{login}</p>
                   <p>{location}</p>
