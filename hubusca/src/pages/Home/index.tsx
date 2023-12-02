@@ -4,6 +4,7 @@ import { useGetUser } from '../../hooks';
 import { Loading } from '../../components';
 import { useHistoricUser } from '../../hooks/storage';
 import { UseCard } from '../../components/user-card';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function Home() {
   const [search, setSearch] = useState("");
@@ -22,23 +23,18 @@ export function Home() {
   
   return (
     <><S.ContainerApp>
-      <div>
-        {/* <header className='header-top'>
-        </header> */}
-
-        <nav>
-          <p>App para buscar perfis do GitHub</p>
-        </nav>
-
+        <Link to="/historic"><p>Usuários Recentes</p></Link>
+        <S.nav>
+          <img src="src/components/imgs/logo.png"></img>
+          <h1>HUBusca</h1>
+        </S.nav>
         <S.Main>
-          <S.Center>
             <S.Form>
               <h1>Busque pelo Perfil</h1>
               <input type='text'
                 placeholder='Digite um username'
                 ref={inputSearchRef}
                 />
-
                 <S.Search>
                   <button onClick={() => {
                     if(!inputSearchRef.current){
@@ -60,14 +56,12 @@ export function Home() {
             {isSuccess && user.id &&(
               <UseCard data={user}/>
             )}
-          </S.Center>
+            
+           
         </S.Main>
-
-      </div>
-    </S.ContainerApp>
-    <S.Footer>
-    <p>&copy; 2023 Mikael Hayden | contatoshayden@gmail.com</p>
-    </S.Footer></>
-
+      <S.Footer>
+        <p>&copy; 2023 Mikael Hayden | contatoshayden@gmail.com</p>
+      </S.Footer>
+    </S.ContainerApp></>
   );
 }

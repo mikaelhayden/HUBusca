@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { User } from '../../models';
+import * as S from "./style";
 
 interface UseLocation{
     state: {user:User}
@@ -9,9 +10,9 @@ export function Profile()
     const {state: {user}} = useLocation() as UseLocation;
     
     return (
-      <><div>
-          <main>
-                <div>
+      <><S.ContainerApp>
+          <S.Main>
+
                     <br/>
                     <div>
                     <div>
@@ -21,11 +22,11 @@ export function Profile()
                         <p>{user.location}</p>
                     </div>
                     </div>
-                </div>
-            </main>
-        </div>
-      <footer className='rodape'>
+
+            </S.Main>
+      <S.Footer>
       <p>&copy; 2023 Mikael Hayden | contatoshayden@gmail.com</p>
-      </footer></>
+      </S.Footer>
+      </S.ContainerApp></>
     );
 }
