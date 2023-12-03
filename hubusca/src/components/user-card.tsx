@@ -7,7 +7,7 @@ interface Props {
 }
 
 const CardContainer = styled.div`
-  background-color: #09101c;
+  background-color: #02173b ;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +17,7 @@ const CardContainer = styled.div`
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.39);
 `;
 
 const Content = styled.div`

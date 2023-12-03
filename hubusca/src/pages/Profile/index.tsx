@@ -12,17 +12,17 @@ export function Profile()
     return (
       <><S.ContainerApp>
           <S.Main>
-
-                    <br/>
                     <div>
-                    <div>
-                        <img src={user.avatar_url?? ''} alt='Perfil' />
+                        <S.imagem src={user.avatar_url?? ''} alt='Perfil' />
                         <h1>{user.name}</h1>
-                        <p>{user.login}</p>
                         <p>{user.location}</p>
+                        <S.Container>
+                            <p>ID: {user.id}</p>
+                            <p>Followers: {user.followers} </p>
+                            <p>Repositórios: {user.public_repos} </p>
+                            <p>Username: {user.login} </p>
+                        </S.Container>
                     </div>
-                    </div>
-
             </S.Main>
       <S.Footer>
       <p>&copy; 2023 Mikael Hayden | contatoshayden@gmail.com</p>

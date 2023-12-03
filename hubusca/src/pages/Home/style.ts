@@ -29,7 +29,7 @@ export const ContainerApp = styled.div`
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between; /* Distributes space evenly, placing the footer at the bottom */
-    background-color: #0A0C10;
+    background-color: #000d24;
 `;
 
 export const Center = styled.div`
@@ -50,22 +50,21 @@ export const Form = styled.div`
 
     input[type=text] {
         border-radius: 10px;
-        background: #272B33;
-        box-shadow: 0px 0px 3.7px 1px rgba(0, 0, 0, 0.30);
+        background: #131518;
+        box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.90);
         padding: 10px;
         transition: width 0.4s ease-in-out;
-        width: 100%;
+        width: 95%;
         max-width: 400px;
         height: 8vh;
         font-size: 14pt;
-        color: rgba(123, 121, 121, 0.523);
+        color: white;
         outline: none;
-        border: none;
         margin-bottom: 10px; /* Add margin-bottom for spacing */
     }
 
     input[type=text]:focus {
-        width: 100%;
+        width: 110%;
     }
 
     h1 {
@@ -81,9 +80,10 @@ export const Search = styled.div`
         height: 7vh;
         max-width: 150px;
         border-radius: 15px;
-        background-color: #272B33;
+        background-color: #131518;
         font-size: 15pt;
         box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+        color: white;
 
         :active {
             box-shadow: inset -4px 4px 0 #222;
@@ -91,8 +91,6 @@ export const Search = styled.div`
         }
     }
 `;
-
-
 
 export const Footer = styled.footer`
     padding: 6vh;
@@ -102,5 +100,5 @@ export const Footer = styled.footer`
     align-items: center;
     text-align: center;
     color: #D9DEE3;
-    background-color: #0A0C10;;
+    background-color: #000d24;
 `

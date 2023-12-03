@@ -10,7 +10,10 @@ const {users} = useHistoricUser()
             users.map(user => <UseCard data={user}/>)
       }
       </S.Main>
-
+      <S.Footer>
+          <p>&copy; 2023 Mikael Hayden | contatoshayden@gmail.com</p>
+      </S.Footer>
     </S.ContainerApp>
+
   );
 }
