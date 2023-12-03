@@ -41,21 +41,20 @@ export const Center = styled.div`
 `
 export const Form = styled.div`
     display: flex;
+    width: 100%;
+    height: 40vh;
     flex-direction: column;
-    flex: 1;
     align-items: center;
-    justify-content: center;
-    /* background-color: #272B33; */
-    padding: 20px; /* Increase padding for spacing */
+    justify-content: center; 
 
     input[type=text] {
         border-radius: 10px;
         background: #131518;
         box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.90);
         padding: 10px;
-        transition: width 0.4s ease-in-out;
-        width: 95%;
-        max-width: 400px;
+        transition: width 0.6s ease-in-out;
+        width: 40%;
+        max-width: 100%;
         height: 8vh;
         font-size: 14pt;
         color: white;
@@ -64,7 +63,7 @@ export const Form = styled.div`
     }
 
     input[type=text]:focus {
-        width: 110%;
+        width: 50%;
     }
 
     h1 {
