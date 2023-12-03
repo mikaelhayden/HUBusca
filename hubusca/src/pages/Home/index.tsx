@@ -60,7 +60,7 @@ export function Home() {
           <Link to="/historic"><p> Histórico</p></Link> {/* Link para a página de histórico */}
         </S.nav>
         <S.logo>
-          <img src="src/imgs/logo.png" alt="Logo"></img> {/* Imagem do logo */}
+          <img src="https://cdn.discordapp.com/attachments/941888104170651689/1180972655755661332/logo.png?ex=657f5d7e&is=656ce87e&hm=65fb214f8666e84d049ff088b4a7241bca28b36695a090ae89d8f93382f34124&" alt="Logo"></img> {/* Imagem do logo */}
           <h1>HUBusca</h1>
         </S.logo>
         <S.Main>
