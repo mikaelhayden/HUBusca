@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
+
 export const nav = styled.nav`
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding: 1%;
+    p{
+        padding-left: 20px;
+    }
+`
+
+export const logo = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -56,7 +67,7 @@ export const Form = styled.div`
         width: 40%;
         max-width: 100%;
         height: 8vh;
-        font-size: 14pt;
+        font-size: 13pt;
         color: white;
         outline: none;
         margin-bottom: 10px; /* Add margin-bottom for spacing */

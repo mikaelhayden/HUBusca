@@ -1,9 +1,14 @@
 // style.ts
 import styled from "styled-components";
 
+export const nav = styled.nav`
+  color: white;
+  padding: 1%;
+`
+
 export const Main = styled.main`
     display: flex;
-    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    flex-wrap: wrap;
     justify-content: center;
     color: white;
     height: 100%;
@@ -12,7 +17,7 @@ export const Main = styled.main`
 
 export const ContainerApp = styled.div`
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
     min-height: 100vh;
     background-color: #000d24;
     justify-content: space-between; 
