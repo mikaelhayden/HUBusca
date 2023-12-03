@@ -5,7 +5,7 @@ import { useGetUser } from '../../hooks'; // Importa um hook personalizado para 
 import { Loading } from '../../components'; // Importa um componente de loading
 import { useHistoricUser } from '../../hooks/storage'; // Importa um hook personalizado para gerenciar histórico de usuários
 import { UseCard } from '../../components/user-card'; // Importa um componente para exibir informações do usuário
-import { Link, useNavigate } from 'react-router-dom'; // Importa componente de Link e hook de navegação
+import { Link } from 'react-router-dom'; // Importa componente de Link e hook de navegação
 
 // Define o componente funcional Home
 export function Home() {
@@ -60,7 +60,7 @@ export function Home() {
           <Link to="/historic"><p> Histórico</p></Link> {/* Link para a página de histórico */}
         </S.nav>
         <S.logo>
-          <img src="src/components/imgs/logo.png" alt="Logo"></img> {/* Imagem do logo */}
+          <img src="src/imgs/logo.png" alt="Logo"></img> {/* Imagem do logo */}
           <h1>HUBusca</h1>
         </S.logo>
         <S.Main>
